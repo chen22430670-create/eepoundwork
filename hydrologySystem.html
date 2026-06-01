@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地景與水利 - 白鷺鷥埤塘研究與導覽網</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; padding-bottom: 60px; }
+        header { background: #2E7D32; color: white; padding: 20px; text-align: center; }
+        nav { background: #333; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; }
+        nav li { position: relative; }
+        nav a { display: block; padding: 15px 20px; color: white; text-decoration: none; }
+        nav a:hover { background: #555; }
+        nav ul ul { display: none; position: absolute; top: 100%; left: 0; background: #444; min-width: 150px; z-index: 100; }
+        nav ul ul li { width: 100%; }
+        nav ul li:hover > ul { display: block; }
+        main { padding: 40px; max-width: 800px; margin: auto; }
+        footer { background: #222; color: white; text-align: center; padding: 15px; position: fixed; bottom: 0; width: 100%; }
+        pre { background: #f4f4f4; padding: 15px; border-left: 5px solid #2E7D32; font-family: Consolas, monospace; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>白鷺鷥埤塘研究與導覽</h1>
+        <p>探索桃園千塘之鄉的運算思維、生態與文化變遷</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="aboutPond.html">關於</a></li>
+            <li><a href="pondMap.html">埤塘地圖</a></li>
+            <li>
+                <a href="#">專題研究 ▼</a>
+                <ul>
+                    <li><a href="hydrologySystem.html">地景與水利</a></li>
+                    <li><a href="ecologicalSurvey.html">生態調查</a></li>
+                    <li><a href="historyCulture.html">歷史與文化</a></li>
+                    <li><a href="environmentalChange.html">變遷與現狀</a></li>
+                </ul>
+            </li>
+            <li><a href="interactiveQuest.html">互動任務</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>1. 地景與水利（運算思維的核心）</h2>
+        
+        <h3>給水系統與編號</h3>
+        <p>白鷺鷥埤塘隸屬於<strong>桃園大圳</strong>系統，官方編號為 <strong>第XX號埤塘</strong>。它是桃園台地綿密水網中的重要節點。</p>
+        
+        <h3>關鍵構造調查</h3>
+        <ul>
+            <li><strong>進水口：</strong> 承接大圳幹線引入之水源，設有手動式微調水門。</li>
+            <li><strong>出水口（閘門）：</strong> 位於埤塘西南側，負責宣洩灌溉用水至下游農田。</li>
+            <li><strong>溢洪道：</strong> 當颱風或暴雨導致水位超越安全警戒線時，採重力溢流方式自動排水，保護堤岸安全。</li>
+        </ul>
+
+        <h3>分水邏輯（運算思維拆解）</h3>
+        <p>該埤塘的供水邏輯採用了<strong>「水位高度觸發」結合「定時開啟」</strong>的混合演算法：</p>
+        <pre>
+IF 乾旱灌溉期 AND 時間 == 每日清晨05:00 
+    THEN 開啟出水口閘門 2 小時
+IF 暴雨期 AND 水位 > 溢流牆高度 
+    THEN 啟動重力溢洪（自動分流防洪）
+        </pre>
+    </main>
+
+    <footer>
+        <p>© 2026 桃園埤塘研究與導覽製作小組專案</p>
+    </footer>
+
+</body>
+</html>

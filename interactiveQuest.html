@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>互動任務 - 白鷺鷥埤塘研究與導覽網</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; padding-bottom: 60px; }
+        header { background: #2E7D32; color: white; padding: 20px; text-align: center; }
+        nav { background: #333; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; }
+        nav li { position: relative; }
+        nav a { display: block; padding: 15px 20px; color: white; text-decoration: none; }
+        nav a:hover { background: #555; }
+        nav ul ul { display: none; position: absolute; top: 100%; left: 0; background: #444; min-width: 150px; z-index: 100; }
+        nav ul ul li { width: 100%; }
+        nav ul li:hover > ul { display: block; }
+        main { padding: 40px; max-width: 800px; margin: auto; }
+        footer { background: #222; color: white; text-align: center; padding: 15px; position: fixed; bottom: 0; width: 100%; }
+        button { background: #2E7D32; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background: #1b5e20; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>白鷺鷥埤塘研究與導覽</h1>
+        <p>探索桃園千塘之鄉的運算思維、生態與文化變遷</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="aboutPond.html">關於</a></li>
+            <li><a href="pondMap.html">埤塘地圖</a></li>
+            <li>
+                <a href="#">專題研究 ▼</a>
+                <ul>
+                    <li><a href="hydrologySystem.html">地景與水利</a></li>
+                    <li><a href="ecologicalSurvey.html">生態調查</a></li>
+                    <li><a href="historyCulture.html">歷史與文化</a></li>
+                    <li><a href="environmentalChange.html">變遷與現狀</a></li>
+                </ul>
+            </li>
+            <li><a href="interactiveQuest.html">互動任務</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>5. 互動任務（導覽設計）</h2>
+        
+        <div style="background: #fff3cd; padding: 20px; border-left: 5px solid #ffc107; margin-bottom: 20px;">
+            <h3>📌 實地觀察任務 (SugarCube 任務提示)</h3>
+            <p>「當你走到埤塘南側的木棧道時，請抬頭尋找高聳的枯木。你是否有看到白鷺鷥在此築巢？請按下手機確認鍵以解鎖下一關。」</p>
+        </div>
+
+        <div style="background: #f1f3f4; padding: 20px; border-radius: 8px;">
+            <h3>文史生態小測驗</h3>
+            <p><strong>問題：白鷺鷥埤塘早期在地理上因為進水特殊，舊稱為什麼埤？</strong></p>
+            
+            <input type="radio" name="quiz" id="q1" value="wrong"> <label for="q1">A) 順水埤</label><br>
+            <input type="radio" name="quiz" id="q2" value="correct"> <label for="q2">B) 倒吊埤</label><br>
+            <input type="radio" name="quiz" id="q3" value="wrong"> <label for="q3">C) 白鷺埤</label><br><br>
+            
+            <button onclick="checkAnswer()">送出答案</button>
+
+            <div id="hiddenContent" style="display:none; margin-top:20px; text-align:center;">
+                <p style="color:green; font-weight:bold;">🎉 恭喜答對！解鎖【隱藏版地景照：埤塘黃昏倒影】</p>
+                <div style="width:100%; height:200px; background:#2E7D32; color:white; display:flex; justify-content:center; align-items:center; border-radius:8px;">
+                    【此處放入白鷺鷥埤塘黃昏空拍美照圖檔】
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function checkAnswer() {
+                var isCorrect = document.getElementById("q2").checked;
+                if(isCorrect) {
+                    document.getElementById("hiddenContent").style.display = "block";
+                    alert("答對了！隱藏內容已在下方解鎖。");
+                } else {
+                    alert("答案錯誤，再試著看一次歷史與文化分頁喔！");
+                }
+            }
+        </script>
+    </main>
+
+    <footer>
+        <p>© 2026 桃園埤塘研究與導覽製作小組專案</p>
+    </footer>
+
+</body>
+</html>

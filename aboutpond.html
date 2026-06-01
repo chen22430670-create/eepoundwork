@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於本站 - 白鷺鷥埤塘研究與導覽網</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; padding-bottom: 60px; }
+        header { background: #2E7D32; color: white; padding: 20px; text-align: center; }
+        nav { background: #333; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; }
+        nav li { position: relative; }
+        nav a { display: block; padding: 15px 20px; color: white; text-decoration: none; }
+        nav a:hover { background: #555; }
+        nav ul ul { display: none; position: absolute; top: 100%; left: 0; background: #444; min-width: 150px; z-index: 100; }
+        nav ul ul li { width: 100%; }
+        nav ul li:hover > ul { display: block; }
+        main { padding: 40px; max-width: 800px; margin: auto; }
+        footer { background: #222; color: white; text-align: center; padding: 15px; position: fixed; bottom: 0; width: 100%; }
+        
+        .intro-box { background: #f9f9f9; padding: 20px; border-left: 5px solid #2E7D32; margin-bottom: 20px; border-radius: 0 8px 8px 0; }
+        .team-grid { display: flex; gap: 20px; margin-top: 20px; }
+        .team-card { flex: 1; background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>白鷺鷥埤塘研究與導覽</h1>
+        <p>探索桃園千塘之鄉的運算思維、生態與文化變遷</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="aboutPond.html">關於</a></li>
+            <li><a href="pondMap.html">埤塘地圖</a></li>
+            <li>
+                <a href="#">專題研究 ▼</a>
+                <ul>
+                    <li><a href="hydrologySystem.html">地景與水利</a></li>
+                    <li><a href="ecologicalSurvey.html">生態調查</a></li>
+                    <li><a href="historyCulture.html">歷史與文化</a></li>
+                    <li><a href="environmentalChange.html">變遷與現狀</a></li>
+                </ul>
+            </li>
+            <li><a href="interactiveQuest.html">互動任務</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>關於本站</h2>
+        
+        <div class="intro-box">
+            <h3>🎯 計畫緣起</h3>
+            <p>桃園擁有「千塘之鄉」的美譽，而白鷺鷥埤塘是其中一顆璀璨的明珠。本計畫結合<strong>數位科技</strong>與<strong>在地文史踏查</strong>，透過運算思維拆解老祖先的水利智慧，並記錄面臨都市化衝擊下的生態變遷。我們希望透過這個數位導覽網站，激起大眾對埤塘保育的重視，傳承珍貴的地方認同。</p>
+        </div>
+
+        <h3>📍 研究對象概述</h3>
+        <p>白鷺鷥埤塘位於桃園市，是一座歷史悠久的灌溉埤塘。這裡不僅是留鳥與候鳥的重要棲息地，更是見證地方農業發展轉型都市休憩空間的活教材。</p>
+
+        <h3>👥 製作團隊介紹</h3>
+        <div class="team-grid">
+            <div class="team-card">
+                <h4>文史生態組</h4>
+                <p>負責實地文史考證、洗衫坑居民訪談，以及進行台灣萍蓬草、水鳥等生態物種的調查紀錄。</p>
+            </div>
+            <div class="team-card">
+                <h4>資訊網頁組</h4>
+                <p>負責利用運算思維將分水邏輯轉譯為演算法程式碼，並在 VS Code 中開發建置此多頁面導覽網站。</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 桃園埤塘研究與導覽製作小組專案</p>
+    </footer>
+
+</body>
+</html>
